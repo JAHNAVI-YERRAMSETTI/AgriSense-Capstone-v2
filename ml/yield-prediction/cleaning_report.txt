@@ -1,0 +1,127 @@
+AGRISENSE - YIELD DATA CLEANING REPORT
+======================================================================
+
+Original records: 190,044
+After basic validity filtering: 190,044
+Final training records: 186,296
+Total records removed: 3,748
+
+REMOVAL METHOD
+----------------------------------------------------------------------
+1. Removed missing/non-finite values.
+2. Removed records with non-positive area.
+3. Removed records with non-positive yield.
+4. Applied crop-specific 1st and 99th percentile yield bounds.
+
+CROP-WISE FINAL RECORD COUNTS
+----------------------------------------------------------------------
+Crop
+Barley                   7758
+Castor                   4921
+Chickpea                13569
+Cotton                   7646
+Finger Millet            5748
+Groundnut               11786
+Kharif Sorghum          10996
+Linseed                  6699
+Maize                   13867
+Pearl Millet             9753
+Pigeonpea               12763
+Rabi Sorghum             3902
+Rapeseed And Mustard    11391
+Rice                    14678
+Safflower                2355
+Sesamum                 13005
+Soyabean                 3985
+Sugarcane               13226
+Sunflower                4793
+Wheat                   13455
+
+CROP-WISE YIELD STATISTICS
+----------------------------------------------------------------------
+                      Count  Minimum   Median     Mean   Maximum
+Crop                                                            
+Barley                 7758   354.17  1270.12  1474.23   3760.25
+Castor                 4921   100.00   500.00   669.55   2541.48
+Chickpea              13569   147.41   671.52   720.43   1774.19
+Cotton                 7646    36.00   211.06   245.45    933.76
+Finger Millet          5748   184.31   885.17   955.79   2800.00
+Groundnut             11786   218.42   973.86  1011.28   2740.73
+Kharif Sorghum        10996    59.74   781.18   828.89   2397.94
+Linseed                6699    75.83   336.35   402.49   1157.89
+Maize                 13867   250.00  1300.00  1558.60   6113.40
+Pearl Millet           9753    62.50   726.93   826.46   2500.00
+Pigeonpea             12763   111.11   700.00   750.38   2239.32
+Rabi Sorghum           3902   146.60   730.32   865.95   4469.95
+Rapeseed And Mustard  11391   121.21   600.00   681.18   1841.89
+Rice                  14678   221.92  1417.05  1587.82   4127.31
+Safflower              2355    94.15   457.75   480.66   1333.33
+Sesamum               13005    37.04   277.78   318.02   1000.00
+Soyabean               3985   188.68   932.54   947.15   2149.58
+Sugarcane             13226   300.00  5200.00  5337.01  12251.01
+Sunflower              4793   166.67   853.66   903.43   2183.91
+Wheat                 13455   310.98  1538.46  1737.95   4550.57
+
+ANDHRA PRADESH CHECK
+----------------------------------------------------------------------
+Final Andhra Pradesh records: 7,082
+AP districts: 11
+AP crops: 19
+
+AP crop counts:
+Crop
+Castor                  313
+Chickpea                368
+Cotton                  452
+Finger Millet           506
+Groundnut               547
+Kharif Sorghum          496
+Linseed                  25
+Maize                   461
+Pearl Millet            506
+Pigeonpea               544
+Rabi Sorghum            489
+Rapeseed And Mustard     88
+Rice                    564
+Safflower               141
+Sesamum                 533
+Soyabean                 55
+Sugarcane               558
+Sunflower               297
+Wheat                   139
+
+REMOVED EXTREME RECORDS
+----------------------------------------------------------------------
+Records removed by percentile filtering: 3,748
+
+ Year          State                District      Crop  Area_1000_ha  Yield_kg_per_ha
+ 2007          Bihar             Muzaffarpur  Chickpea          0.11         58363.64
+ 2007          Bihar                 Saharsa  Chickpea          0.03         32000.00
+ 2013    West Bengal                Midnapur Sugarcane          3.21         22062.30
+ 2016        Haryana                  Rohtak     Maize          0.70         21428.57
+ 2011    West Bengal                 Bankura Sugarcane          0.01         21000.00
+ 1967      Karnataka               Bangalore Sugarcane          2.70         19481.48
+ 1966      Karnataka               Bangalore Sugarcane          3.30         19060.61
+ 1981        Gujarat       Vadodara / Baroda Sugarcane          0.30         19000.00
+ 1982        Gujarat       Vadodara / Baroda Sugarcane          0.40         19000.00
+ 2004      Telangana                Adilabad Sugarcane          0.05         19000.00
+ 2014    West Bengal                 Hooghly Sugarcane          0.83         17987.95
+ 2014    West Bengal                Midnapur Sugarcane          4.39         17986.33
+ 1997    Maharashtra                  Nanded Sugarcane          9.90         17873.74
+ 2015      Rajasthan          Swami Madhopur Sugarcane          0.07         17668.49
+ 1997    Maharashtra               Ratnagiri Sugarcane          0.10         17500.00
+ 1997     Tamil Nadu        Chengalpattu MGR Sugarcane         12.70         17092.13
+ 1998     Tamil Nadu                 Madurai Sugarcane         29.59         16836.77
+ 1978     Tamil Nadu                   Salem Sugarcane         24.50         16510.20
+ 1996 Andhra Pradesh                 Kurnool Sugarcane          0.16         16500.00
+ 2011    West Bengal                Midnapur Sugarcane          3.21         16333.33
+ 1988  Uttar Pradesh              Saharanpur Sugarcane         52.40         16135.50
+ 1993 Andhra Pradesh              Ananthapur Sugarcane          1.00         16000.00
+ 2012    West Bengal                Midnapur Sugarcane          3.16         15936.71
+ 1989      Telangana                Nalgonda Sugarcane          1.10         15818.18
+ 2017    West Bengal                 Purulia Sugarcane          0.47         15419.41
+ 2013    West Bengal                 Hooghly Sugarcane          0.83         15240.96
+ 1985    West Bengal                   Nadia Sugarcane          0.88         15113.64
+ 2011      Rajasthan               Bharatpur Sugarcane          0.29         15034.48
+ 1993     Tamil Nadu Tiruchirapalli / Trichy Sugarcane         37.00         14668.68
+ 1975      Jharkhand                  Ranchi    Barley          0.43         14441.86

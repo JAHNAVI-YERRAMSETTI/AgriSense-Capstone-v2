@@ -1,0 +1,179 @@
+/* AgriSense — Predictions page refresh */
+:root {
+  --prediction-green-950: #103b2b;
+  --prediction-green-900: #164b35;
+  --prediction-green-800: #216344;
+  --prediction-green-700: #2c8053;
+  --prediction-green-100: #e5f2e8;
+  --prediction-green-50: #f2f7f1;
+  --prediction-ink: #20372b;
+  --prediction-muted: #718176;
+  --prediction-border: #e1e8df;
+  --prediction-surface: #fff;
+  --prediction-shadow: 0 8px 24px rgba(24, 57, 37, .055);
+}
+
+.predictions-layout { min-height: 100vh; width: 100%; background: #f5f7f2; }
+.predictions-main { margin-left: 250px; min-height: 100vh; min-width: 0; box-sizing: border-box; }
+.predictions-page { box-sizing: border-box; width: 100%; min-height: 100vh; padding: 28px 30px 40px; color: var(--prediction-ink); background: radial-gradient(circle at 96% 0%, #e7f1e5 0, transparent 340px), #f5f7f2; }
+
+/* Header */
+.predictions-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.predictions-header h1 { margin: 0 0 6px; color: var(--prediction-green-900); font-size: clamp(24px, 2.2vw, 30px); line-height: 1.2; font-weight: 800; letter-spacing: -.5px; }
+.predictions-header p { margin: 0; color: var(--prediction-muted); font-size: 14px; line-height: 1.55; }
+
+/* Hero banner */
+.predictions-hero { position: relative; isolation: isolate; display: flex; align-items: center; min-height: 168px; margin-bottom: 22px; overflow: hidden; border-radius: 18px; background: var(--prediction-green-900); box-shadow: var(--prediction-shadow); }
+.predictions-hero-image { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+.predictions-hero-overlay { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(12,49,32,.94), rgba(18,63,41,.68) 58%, rgba(18,63,41,.1)); }
+.predictions-hero-content { max-width: 590px; padding: 25px 30px; color: white; }
+.predictions-hero-content > span { display: inline-block; padding: 6px 9px; border: 1px solid rgba(255,255,255,.28); border-radius: 6px; background: rgba(255,255,255,.12); color: #e5f5e5; font-size: 10px; font-weight: 800; letter-spacing: 1px; }
+.predictions-hero-content h2 { margin: 12px 0 6px; color: white; font-size: clamp(24px, 3vw, 32px); line-height: 1.2; font-weight: 800; }
+.predictions-hero-content p { margin: 0; color: rgba(255,255,255,.9); font-size: 13px; line-height: 1.65; }
+
+/* Shared cards */
+.prediction-selection-card, .farm-state-preview, .prediction-result, .yield-prediction-card, .risk-analysis-card, .disease-detection-card, .prediction-module { box-sizing: border-box; min-width: 0; background: var(--prediction-surface); border: 1px solid var(--prediction-border); border-radius: 16px; box-shadow: var(--prediction-shadow); }
+.prediction-selection-card, .farm-state-preview, .prediction-result, .yield-prediction-card, .risk-analysis-card, .disease-detection-card { padding: 22px; margin-bottom: 20px; }
+.prediction-selection-card { margin-bottom: 20px; }
+.prediction-field { display: flex; flex-direction: column; gap: 8px; }
+.prediction-field label { color: #35483d; font-size: 13px; font-weight: 700; }
+.prediction-field select { box-sizing: border-box; width: 100%; max-width: 520px; padding: 12px 14px; border: 1px solid #d5dfd6; border-radius: 9px; outline: none; background: white; color: var(--prediction-ink); font: inherit; font-size: 14px; transition: border-color .2s, box-shadow .2s; }
+.prediction-field select:focus { border-color: var(--prediction-green-700); box-shadow: 0 0 0 3px rgba(44,128,83,.12); }
+.selected-farm-info { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin-top: 20px; padding-top: 18px; border-top: 1px solid #edf0eb; }
+.selected-farm-info > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.selected-farm-info span, .state-item span, .yield-result-details span { color: var(--prediction-muted); font-size: 12px; }
+.selected-farm-info strong, .state-item strong, .yield-result-details strong { color: var(--prediction-ink); font-size: 14px; overflow-wrap: anywhere; }
+
+/* Farm state summary */
+.section-heading { margin-bottom: 18px; }
+.section-heading h2, .result-header h2 { margin: 0 0 6px; color: var(--prediction-green-900); font-size: 20px; line-height: 1.3; font-weight: 750; }
+.section-heading p, .result-header p { margin: 0; color: var(--prediction-muted); font-size: 13px; line-height: 1.6; }
+.farm-state-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+.state-item { box-sizing: border-box; display: flex; flex-direction: column; gap: 7px; min-width: 0; padding: 15px; border: 1px solid var(--prediction-border); border-radius: 11px; background: #f7faf6; }
+.prediction-message, .prediction-empty { box-sizing: border-box; margin-bottom: 20px; padding: 20px; border: 1px solid var(--prediction-border); border-radius: 12px; background: white; color: var(--prediction-muted); text-align: center; }
+
+/* Three separate modules */
+.prediction-module { display: grid; grid-template-columns: minmax(220px, 30%) minmax(0,1fr); align-items: start; gap: 24px; padding: 22px; margin: 22px 0; }
+.prediction-module-image { grid-column: 1; grid-row: 1 / span 3; position: relative; width: 100%; height: 230px; overflow: hidden; border-radius: 13px; background: #e7f0e5; }
+.prediction-module-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.prediction-module-title, .prediction-module > .section-heading, .prediction-module > .prediction-module-action, .prediction-module > .prediction-result, .prediction-module > .yield-prediction-card, .prediction-module > .disease-detection-card { grid-column: 2; min-width: 0; }
+.prediction-module .section-heading { margin: 2px 0 18px; }
+.prediction-module-title h2 { margin: 0 0 7px; color: var(--prediction-green-900); font-size: 22px; line-height: 1.25; }
+.prediction-module-title p { margin: 0; color: var(--prediction-muted); font-size: 13px; line-height: 1.6; }
+.prediction-module-crop .prediction-module-heading { grid-column: 2; }
+.prediction-module-action { padding: 0; margin: 0; border: 0; background: transparent; box-shadow: none; }
+.prediction-module .prediction-result { grid-column: 1 / -1; width: 100%; margin: 0; box-shadow: none; background: #fcfdfb; }
+.prediction-module-yield .yield-prediction-card, .prediction-module-disease .disease-detection-card { grid-column: 2; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.prediction-module-yield .yield-prediction-card .section-heading, .prediction-module-disease .disease-detection-card .section-heading { margin: 2px 0 18px; }
+.prediction-module-yield .yield-result, .prediction-module-disease .disease-result { grid-column: 1 / -1; }
+
+/* Buttons */
+.prediction-button { display: inline-flex; align-items: center; justify-content: center; max-width: 100%; margin-top: 8px; padding: 12px 19px; border: 0; border-radius: 9px; background: #176b3a; color: white; font-size: 13px; font-weight: 700; line-height: 1.35; cursor: pointer; box-shadow: 0 4px 10px rgba(23,107,58,.12); transition: background .2s, transform .15s, box-shadow .2s; }
+.prediction-button:hover:not(:disabled) { background: #10582f; box-shadow: 0 6px 14px rgba(23,107,58,.18); }
+.prediction-button:active:not(:disabled) { transform: translateY(1px); }
+.prediction-button:disabled { opacity: .62; cursor: not-allowed; box-shadow: none; }
+
+/* Crop recommendation result */
+.result-header { margin-bottom: 18px; }
+.recommended-crop-card { box-sizing: border-box; margin-bottom: 22px; padding: 22px; border: 1px solid #d7e8d0; border-radius: 13px; background: #edf6ed; text-align: center; }
+.recommended-crop-card span { display: block; margin-bottom: 7px; color: #5f6f59; font-size: 13px; }
+.recommended-crop-card h3 { margin: 0; color: #176b3a; font-size: 28px; text-transform: capitalize; }
+.top-recommendations h3 { margin: 0 0 14px; color: var(--prediction-ink); font-size: 16px; }
+.recommendation-list { display: flex; flex-direction: column; gap: 10px; }
+.recommendation-item { display: flex; align-items: center; gap: 13px; min-width: 0; padding: 13px; border: 1px solid var(--prediction-border); border-radius: 10px; background: white; }
+.recommendation-rank { min-width: 30px; color: var(--prediction-green-700); font-weight: 800; }
+.recommendation-details { flex: 1; min-width: 0; }
+.recommendation-name { margin-bottom: 7px; color: #35483d; font-size: 14px; font-weight: 700; text-transform: capitalize; }
+.probability-bar { width: 100%; height: 7px; overflow: hidden; border-radius: 20px; background: #e5e9e3; }
+.probability-fill { height: 100%; border-radius: inherit; background: #2c8053; transition: width .4s ease; }
+.recommendation-probability { min-width: 62px; color: #35483d; font-size: 13px; font-weight: 700; text-align: right; }
+.prediction-note { box-sizing: border-box; margin-top: 20px; padding: 15px 16px; border-left: 4px solid #6b9f5c; border-radius: 7px; background: #f5f8f3; }
+.prediction-note strong { display: block; margin-bottom: 5px; color: #35483d; font-size: 13px; }
+.prediction-note p { margin: 0; color: var(--prediction-muted); font-size: 13px; line-height: 1.6; }
+
+/* Yield result */
+.yield-result { box-sizing: border-box; margin-top: 20px; padding: 20px; border: 1px solid #d9e5d8; border-radius: 13px; background: #f8fbf7; }
+.yield-result-main { display: flex; flex-wrap: wrap; align-items: baseline; gap: 7px 10px; padding-bottom: 17px; border-bottom: 1px solid #e3eae0; }
+.yield-result-main span { flex-basis: 100%; color: var(--prediction-muted); font-size: 13px; }
+.yield-result-main strong { color: var(--prediction-green-900); font-size: 31px; line-height: 1.15; }
+.yield-result-main small { color: var(--prediction-muted); font-size: 13px; }
+.yield-result-details { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 17px; }
+.yield-result-details > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+
+/* Disease image upload and results */
+.disease-upload-area { box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 17px; border: 1px dashed #b8cdbb; border-radius: 11px; background: #f5f8f4; }
+.disease-upload-label { display: inline-flex; width: fit-content; padding: 10px 15px; border-radius: 8px; background: #2c8053; color: white; font-size: 13px; font-weight: 700; cursor: pointer; transition: background .2s; }
+.disease-upload-label:hover { background: #216344; }
+.disease-upload-area input[type="file"] { width: 100%; max-width: 100%; color: #4b5563; font-size: 12px; }
+.disease-file-name { margin: 0; color: #35483d; font-size: 12px; overflow-wrap: anywhere; }
+.disease-image-preview { display: flex; justify-content: center; margin-top: 16px; padding: 12px; border: 1px solid var(--prediction-border); border-radius: 11px; background: #f8faf7; }
+.disease-image-preview img { display: block; width: 100%; max-width: 300px; max-height: 280px; object-fit: contain; border-radius: 8px; }
+.disease-result { box-sizing: border-box; margin-top: 20px; padding: 18px; border: 1px solid #dce8d8; border-radius: 12px; background: #f8fbf7; }
+.disease-result-main { padding-bottom: 15px; border-bottom: 1px solid #e5e7eb; }
+.disease-result-main span, .disease-confidence span { display: block; margin-bottom: 7px; color: var(--prediction-muted); font-size: 12px; }
+.disease-result-main h3 { margin: 0; color: #35652a; font-size: 21px; overflow-wrap: anywhere; }
+.disease-confidence { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e5e7eb; }
+.disease-confidence span { margin: 0; }
+.disease-confidence strong { color: #35652a; font-size: 17px; }
+.disease-top-predictions { margin-top: 18px; }
+.disease-top-predictions h3 { margin: 0 0 12px; color: var(--prediction-ink); font-size: 15px; }
+.disease-prediction-list { display: flex; flex-direction: column; gap: 9px; }
+.disease-prediction-item { display: grid; grid-template-columns: 30px minmax(0,1fr) auto; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--prediction-border); border-radius: 9px; background: white; }
+.disease-prediction-item span { color: var(--prediction-green-700); font-size: 12px; font-weight: 800; }
+.disease-prediction-item strong { color: #35483d; font-size: 12px; overflow-wrap: anywhere; }
+.disease-prediction-item b { color: #35483d; font-size: 12px; white-space: nowrap; }
+
+/* Risk analysis */
+.risk-analysis-card { margin-top: 22px; }
+.risk-analysis-result { margin-top: 20px; }
+.risk-status { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 15px; border-radius: 10px; background: #f6f8f5; }
+.risk-status strong, .risk-severity { display: inline-block; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800; }
+.risk-status-low, .risk-severity-low { color: #166534; background: #dcfce7; }
+.risk-status-medium, .risk-severity-medium { color: #92400e; background: #fef3c7; }
+.risk-status-high, .risk-severity-high { color: #991b1b; background: #fee2e2; }
+.risk-status-unknown, .risk-severity-unknown { color: #475569; background: #e2e8f0; }
+.risk-analysis-message { margin: 15px 0; line-height: 1.6; }
+.risk-list { display: grid; gap: 12px; margin-top: 15px; }
+.risk-item { min-width: 0; padding: 15px; border: 1px solid var(--prediction-border); border-radius: 11px; overflow-wrap: anywhere; }
+.risk-item-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.risk-item-header h3 { margin: 0; color: var(--prediction-green-900); font-size: 15px; }
+.risk-item p { margin: 8px 0; font-size: 13px; line-height: 1.55; }
+.risk-no-findings { margin-top: 15px; padding: 13px; border-radius: 9px; background: #f0fdf4; color: #166534; }
+.risk-disclaimer { margin-top: 16px; color: var(--prediction-muted); font-size: 12px; line-height: 1.55; }
+
+/* Responsive */
+@media (max-width: 1150px) {
+  .predictions-page { padding: 24px; }
+  .prediction-module { grid-template-columns: minmax(180px, 28%) minmax(0,1fr); gap: 18px; padding: 18px; }
+  .prediction-module-image { height: 205px; }
+  .farm-state-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 850px) {
+  .predictions-main { margin-left: 0; }
+  .predictions-page { padding: 20px; }
+  .predictions-header { align-items: flex-start; }
+  .prediction-module { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .prediction-module-image { grid-column: 1; grid-row: auto; height: 190px; }
+  .prediction-module-title, .prediction-module > .section-heading, .prediction-module > .prediction-module-action, .prediction-module > .prediction-result, .prediction-module > .yield-prediction-card, .prediction-module > .disease-detection-card { grid-column: 1; }
+  .prediction-module .prediction-result { grid-column: 1; }
+  .selected-farm-info { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 560px) {
+  .predictions-page { padding: 14px; }
+  .predictions-header { flex-direction: column; gap: 12px; }
+  .predictions-hero { min-height: 155px; border-radius: 13px; }
+  .predictions-hero-content { padding: 20px; }
+  .prediction-selection-card, .farm-state-preview, .prediction-result, .yield-prediction-card, .risk-analysis-card, .disease-detection-card { padding: 16px; }
+  .prediction-module { padding: 14px; margin: 16px 0; border-radius: 13px; }
+  .prediction-module-image { height: 155px; }
+  .selected-farm-info, .farm-state-grid, .yield-result-details { grid-template-columns: 1fr; }
+  .state-item { padding: 12px; }
+  .recommended-crop-card { padding: 18px; }
+  .recommended-crop-card h3 { font-size: 25px; }
+  .recommendation-item { gap: 8px; padding: 10px; }
+  .recommendation-rank { min-width: 24px; }
+  .recommendation-probability { min-width: 48px; font-size: 12px; }
+  .disease-upload-area { padding: 13px; }
+  .disease-prediction-item { grid-template-columns: 24px minmax(0,1fr) auto; gap: 7px; padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .prediction-button, .probability-fill { transition: none; } }

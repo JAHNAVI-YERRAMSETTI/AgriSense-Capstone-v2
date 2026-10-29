@@ -1,0 +1,186 @@
+AGRISENSE - YIELD DATASET ANALYSIS
+============================================================
+
+Rows: 16,146
+Columns: 80
+Years: 1966 - 2017
+Number of years: 52
+States: 20
+Districts: 311
+Duplicate rows: 0
+
+DATA TYPES
+------------------------------------------------------------
+Dist.Code                                        int64
+Year                                             int64
+State.Code                                       int64
+State.Name                                         str
+Dist.Name                                          str
+RICE.AREA..1000.ha.                            float64
+RICE.PRODUCTION..1000.tons.                    float64
+RICE.YIELD..Kg.per.ha.                         float64
+WHEAT.AREA..1000.ha.                           float64
+WHEAT.PRODUCTION..1000.tons.                   float64
+WHEAT.YIELD..Kg.per.ha.                        float64
+KHARIF.SORGHUM.AREA..1000.ha.                  float64
+KHARIF.SORGHUM.PRODUCTION..1000.tons.          float64
+KHARIF.SORGHUM.YIELD..Kg.per.ha.               float64
+RABI.SORGHUM.AREA..1000.ha.                    float64
+RABI.SORGHUM.PRODUCTION..1000.tons.            float64
+RABI.SORGHUM.YIELD..Kg.per.ha.                 float64
+SORGHUM.AREA..1000.ha.                         float64
+SORGHUM.PRODUCTION..1000.tons.                 float64
+SORGHUM.YIELD..Kg.per.ha.                      float64
+PEARL.MILLET.AREA..1000.ha.                    float64
+PEARL.MILLET.PRODUCTION..1000.tons.            float64
+PEARL.MILLET.YIELD..Kg.per.ha.                 float64
+MAIZE.AREA..1000.ha.                           float64
+MAIZE.PRODUCTION..1000.tons.                   float64
+MAIZE.YIELD..Kg.per.ha.                        float64
+FINGER.MILLET.AREA..1000.ha.                   float64
+FINGER.MILLET.PRODUCTION..1000.tons.           float64
+FINGER.MILLET.YIELD..Kg.per.ha.                float64
+BARLEY.AREA..1000.ha.                          float64
+BARLEY.PRODUCTION..1000.tons.                  float64
+BARLEY.YIELD..Kg.per.ha.                       float64
+CHICKPEA.AREA..1000.ha.                        float64
+CHICKPEA.PRODUCTION..1000.tons.                float64
+CHICKPEA.YIELD..Kg.per.ha.                     float64
+PIGEONPEA.AREA..1000.ha.                       float64
+PIGEONPEA.PRODUCTION..1000.tons.               float64
+PIGEONPEA.YIELD..Kg.per.ha.                    float64
+MINOR.PULSES.AREA..1000.ha.                    float64
+MINOR.PULSES.PRODUCTION..1000.tons.            float64
+MINOR.PULSES.YIELD..Kg.per.ha.                 float64
+GROUNDNUT.AREA..1000.ha.                       float64
+GROUNDNUT.PRODUCTION..1000.tons.               float64
+GROUNDNUT.YIELD..Kg.per.ha.                    float64
+SESAMUM.AREA..1000.ha.                         float64
+SESAMUM.PRODUCTION..1000.tons.                 float64
+SESAMUM.YIELD..Kg.per.ha.                      float64
+RAPESEED.AND.MUSTARD.AREA..1000.ha.            float64
+RAPESEED.AND.MUSTARD.PRODUCTION..1000.tons.    float64
+RAPESEED.AND.MUSTARD.YIELD..Kg.per.ha.         float64
+SAFFLOWER.AREA..1000.ha.                       float64
+SAFFLOWER.PRODUCTION..1000.tons.               float64
+SAFFLOWER.YIELD..Kg.per.ha.                    float64
+CASTOR.AREA..1000.ha.                          float64
+CASTOR.PRODUCTION..1000.tons.                  float64
+CASTOR.YIELD..Kg.per.ha.                       float64
+LINSEED.AREA..1000.ha.                         float64
+LINSEED.PRODUCTION..1000.tons.                 float64
+LINSEED.YIELD..Kg.per.ha.                      float64
+SUNFLOWER.AREA..1000.ha.                       float64
+SUNFLOWER.PRODUCTION..1000.tons.               float64
+SUNFLOWER.YIELD..Kg.per.ha.                    float64
+SOYABEAN.AREA..1000.ha.                        float64
+SOYABEAN.PRODUCTION..1000.tons.                float64
+SOYABEAN.YIELD..Kg.per.ha.                     float64
+OILSEEDS.AREA..1000.ha.                        float64
+OILSEEDS.PRODUCTION..1000.tons.                float64
+OILSEEDS.YIELD..Kg.per.ha.                     float64
+SUGARCANE.AREA..1000.ha.                       float64
+SUGARCANE.PRODUCTION..1000.tons.               float64
+SUGARCANE.YIELD..Kg.per.ha.                    float64
+COTTON.AREA..1000.ha.                          float64
+COTTON.PRODUCTION..1000.tons.                  float64
+COTTON.YIELD..Kg.per.ha.                       float64
+FRUITS.AREA..1000.ha.                          float64
+VEGETABLES.AREA..1000.ha.                      float64
+FRUITS.AND.VEGETABLES.AREA..1000.ha.           float64
+POTATOES.AREA..1000.ha.                        float64
+ONION.AREA..1000.ha.                           float64
+FODDER.AREA..1000.ha.                          float64
+
+MISSING VALUES
+------------------------------------------------------------
+No null/missing values detected.
+
+AVAILABLE STATES
+------------------------------------------------------------
+Andhra Pradesh
+Assam
+Bihar
+Chhattisgarh
+Gujarat
+Haryana
+Himachal Pradesh
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Orissa
+Punjab
+Rajasthan
+Tamil Nadu
+Telangana
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+YIELD COLUMNS / CROP COVERAGE
+------------------------------------------------------------
+                Crop  Positive records  Zero records  Minimum positive yield  Maximum yield  Mean positive yield
+                Rice             14981          1143                    9.12        5653.83          1602.557210
+               Wheat             13742          2369                   46.11        5541.52          1753.503569
+      Kharif Sorghum             11242          4864                    1.39        6531.25           841.673876
+        Rabi Sorghum              3993         12113                    9.71       10000.00           912.385432
+             Sorghum             11565          4541                    1.39        5742.59           818.253925
+        Pearl Millet              9959          6133                    0.13       10000.00           839.677015
+               Maize             14154          1964                    3.35       21428.57          1607.031152
+       Finger Millet              5883         10243                   21.44        9286.86           973.893221
+              Barley              7928          8198                   14.41       14441.86          1495.353407
+            Chickpea             13869          2235                    3.08       58363.64           734.388380
+           Pigeonpea             13031          3081                   16.39       12402.60           765.757628
+        Minor Pulses             13766           960                    0.01       18888.89           532.164210
+           Groundnut             12050          4086                    3.77        8500.00          1026.307120
+             Sesamum             13252          2850                    1.66        6625.00           322.544415
+Rapeseed And Mustard             11633          4499                    8.23       10000.00           691.134987
+           Safflower              2411         13252                   14.08        4166.67           489.390771
+              Castor              5042         11021                    2.06        4600.00           689.810315
+             Linseed              6853          9036                   12.82        7000.00           413.637261
+           Sunflower              4917         11189                   22.32        4282.05           914.356067
+            Soyabean              4103         12003                   83.33        3884.06           956.101080
+            Oilseeds             12807          1666                    0.81       25500.00           748.567291
+           Sugarcane             13523          2382                   23.53       22062.30          5373.046832
+              Cotton              7816          8315                    0.28        5000.00           257.488526
+
+ANDHRA PRADESH COVERAGE
+------------------------------------------------------------
+Rows: 572
+Years: 1966 - 2017
+Districts: 11
+Districts:
+Ananthapur, Chittoor, East Godavari, Guntur, Kadapa YSR, Krishna, Kurnool, S.P.S. Nellore, Srikakulam, Visakhapatnam, West Godavari
+
+                Crop  Positive AP records
+                Rice                  572
+               Wheat                  158
+      Kharif Sorghum                  529
+        Rabi Sorghum                  518
+             Sorghum                  562
+        Pearl Millet                  517
+               Maize                  539
+       Finger Millet                  509
+              Barley                    0
+            Chickpea                  427
+           Pigeonpea                  561
+        Minor Pulses                  569
+           Groundnut                  572
+             Sesamum                  536
+Rapeseed And Mustard                  115
+           Safflower                  147
+              Castor                  333
+             Linseed                   25
+           Sunflower                  302
+            Soyabean                   62
+            Oilseeds                  572
+           Sugarcane                  564
+              Cotton                  460
+
+IMPORTANT MODELING NOTE
+------------------------------------------------------------
+Production must NOT be used as an input feature when predicting yield because yield is mathematically derived from production and area.
+The first model should therefore avoid target leakage and use only information available before/at prediction time.
+The next step will transform the wide crop columns into a clean long-format dataset with Year, State, District, Crop, Area and Yield.

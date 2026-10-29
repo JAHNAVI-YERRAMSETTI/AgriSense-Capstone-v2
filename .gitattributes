@@ -1,0 +1,5 @@
+*.joblib filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.pkl filter=lfs diff=lfs merge=lfs -text
+ml/crop-recommendation/*.csv filter=lfs diff=lfs merge=lfs -text
+ml/yield-prediction/*.csv filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,524 @@
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+/* =========================================================
+   PAGE LAYOUT
+ */
+
+.agricultural-actions-layout {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+.agricultural-actions-main {
+    min-height: 100vh;
+
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+.agricultural-actions-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.agricultural-actions-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 30px 32px;
+
+    box-sizing: border-box;
+}
+/* =========================================================
+   HEADER
+========================================================= */
+
+.agricultural-actions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+
+.page-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.page-title-row svg {
+    color: #236b36;
+}
+
+
+.page-title-row h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #183b56;
+}
+
+
+.agricultural-actions-header p {
+    margin: 8px 0 0;
+    color: #587086;
+    font-size: 16px;
+}
+
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-action-button,
+.secondary-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 40px;
+    padding: 10px 17px;
+
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.primary-action-button {
+    background: #267a32;
+    color: white;
+}
+
+
+.primary-action-button:hover {
+    background: #1f6429;
+}
+
+
+.secondary-action-button {
+    background: white;
+    color: #285f38;
+    border-color: #78a784;
+}
+
+
+.secondary-action-button:hover {
+    background: #f1f8f2;
+}
+
+
+.primary-action-button:disabled,
+.secondary-action-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   KNOWLEDGE INFO
+========================================================= */
+
+.knowledge-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding: 18px;
+
+    margin-bottom: 25px;
+
+    background: #edf8ef;
+    border: 1px solid #b8d9bd;
+    border-radius: 10px;
+
+    color: #285a35;
+}
+
+
+.knowledge-info-box svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+
+.knowledge-info-box strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+
+.knowledge-info-box p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.action-form-card,
+.actions-card {
+    background: white;
+    border: 1px solid #d8e0e4;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+
+.section-heading h2 {
+    margin: 0 0 5px;
+    font-size: 21px;
+    color: #183b56;
+}
+
+
+.section-heading p {
+    margin: 0;
+    color: #607589;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-section {
+    padding: 20px 0;
+    border-top: 1px solid #e5eaed;
+}
+
+
+.form-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+
+.form-section h3 {
+    margin: 0 0 15px;
+    font-size: 17px;
+    color: #24445b;
+}
+
+
+.form-note {
+    margin: -5px 0 15px;
+    color: #687b8b;
+    font-size: 13px;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #344d60;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 11px 13px;
+
+    border: 1px solid #bdc9d0;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    outline: none;
+    background: white;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #418c50;
+    box-shadow: 0 0 0 3px rgba(65, 140, 80, 0.1);
+}
+
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #344d60;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.checkbox-row input {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    padding-top: 20px;
+    border-top: 1px solid #e5eaed;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.actions-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+.actions-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+
+.actions-table th {
+    padding: 13px 11px;
+    text-align: left;
+
+    background: #f2f5f6;
+    color: #30495a;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-bottom: 1px solid #dbe2e6;
+}
+
+
+.actions-table td {
+    padding: 14px 11px;
+
+    border-bottom: 1px solid #e4e9ec;
+
+    color: #3c5363;
+    font-size: 13px;
+
+    vertical-align: top;
+}
+
+
+.actions-table tbody tr:hover {
+    background: #fafcfb;
+}
+
+
+.action-name-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 220px;
+}
+
+
+.action-name-cell strong {
+    color: #173d58;
+    font-size: 14px;
+}
+
+
+.action-name-cell small {
+    color: #687b89;
+    line-height: 1.45;
+    max-width: 320px;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.evidence-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #edf2f7;
+    color: #496276;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.status-badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.status-badge.active {
+    background: #e2f4e5;
+    color: #28733a;
+}
+
+
+.status-badge.inactive {
+    background: #f3e5e5;
+    color: #9b4141;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #728492;
+}
+
+
+.empty-state p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   LOADING ANIMATION
+========================================================= */
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   SIDEBAR RESPONSIVE ADJUSTMENT
+========================================================= */
+@media (max-width: 900px) {
+
+    .agricultural-actions-main {
+        margin-left: 230px;
+        width: calc(100% - 230px);
+    }
+
+    .agricultural-actions-container {
+        padding: 25px 20px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .agricultural-actions-main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .agricultural-actions-container {
+        padding: 20px 15px;
+    }
+
+}

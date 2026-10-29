@@ -1,0 +1,20 @@
+**/.venv/
+**/venv/
+**/__pycache__/
+*.pyc
+
+frontend/node_modules/
+frontend/dist/
+
+**/target/
+.metadata/
+**/.metadata/
+.settings/
+**/.settings/
+.classpath
+.project
+.factorypath
+# Large PlantVillage dataset - share separately
+ml/disease-detection/dataset/PlantVillage/data.zip
+
+

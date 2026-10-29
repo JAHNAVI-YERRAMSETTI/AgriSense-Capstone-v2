@@ -1,0 +1,35 @@
+AGRISENSE YIELD PREDICTION MODEL
+================================
+
+Model:
+Random Forest Regressor
+
+Training records:
+168,842
+
+Validation records:
+7,018
+
+Test records:
+10,436
+
+Features:
+Year, State, District, Crop, Area_1000_ha
+
+Target:
+Yield_kg_per_ha
+
+Validation Results
+------------------
+MAE  : 525.9852 kg/ha
+RMSE : 855.0890 kg/ha
+R2   : 0.7401
+
+Final Test Results
+------------------
+MAE  : 579.8964 kg/ha
+RMSE : 942.1466 kg/ha
+R2   : 0.6958
+
+Production was NOT used as an input feature
+because yield is derived from production and area.

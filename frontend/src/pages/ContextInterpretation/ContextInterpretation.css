@@ -1,0 +1,465 @@
+/* ================================
+   PAGE LAYOUT
+================================ */
+
+.context-page {
+    margin-left: 232px;
+    min-height: 100vh;
+    padding: 28px 32px;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   MAIN CONTEXT CARD
+================================ */
+
+.context-card {
+    background: #ffffff;
+    border: 1px solid #e3e8e5;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.context-card-header h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.context-card-header p {
+    margin: 0;
+    color: #64748b;
+}
+
+
+/* ================================
+   FARM SELECTION
+================================ */
+
+.context-farm-selection {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.context-farm-selection select {
+    flex: 1;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid #d7ded9;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.context-refresh-button {
+    min-height: 44px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 8px;
+    background: #398438;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.context-refresh-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   FARM SUMMARY
+================================ */
+
+.context-farm-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e8ece9;
+}
+
+.context-farm-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.context-farm-summary span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.context-farm-summary strong {
+    color: #172033;
+    font-size: 15px;
+}
+
+
+/* ================================
+   LOADING
+================================ */
+
+.context-loading {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #64748b;
+}
+
+.context-spin {
+    animation: contextSpin 1s linear infinite;
+}
+
+@keyframes contextSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ================================
+   RESULT HEADER
+================================ */
+
+.context-results {
+    margin-top: 24px;
+}
+
+.context-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.context-result-header h2 {
+    margin: 0 0 5px;
+    font-size: 22px;
+}
+
+.context-result-header p {
+    margin: 0;
+    color: #64748b;
+}
+
+.context-status-success {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #eaf6ec;
+    color: #2e7d32;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   CATEGORY GRID
+================================ */
+
+.context-category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.context-category-card {
+    background: #ffffff;
+    border: 1px solid #e3e8e5;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.context-category-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #edf0ee;
+    background: #fafcfb;
+}
+
+.context-category-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6f3e7;
+    color: #398438;
+    flex-shrink: 0;
+}
+
+.context-category-header h3 {
+    margin: 0 0 4px;
+    font-size: 17px;
+}
+
+.context-category-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* ================================
+   CONTEXT ITEMS
+================================ */
+
+.context-item-list {
+    padding: 4px 20px;
+}
+
+.context-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #edf0ee;
+}
+
+.context-item:last-child {
+    border-bottom: none;
+}
+
+.context-item-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.context-item-parameter {
+    color: #475569;
+    font-size: 14px;
+}
+
+.context-item-value {
+    color: #172033;
+    font-size: 15px;
+}
+
+.context-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 7px;
+}
+
+.context-item-interpretation {
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* ================================
+   SEVERITY
+================================ */
+
+.context-severity {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.context-severity-low {
+    background: #eaf6ec;
+    color: #2e7d32;
+}
+
+.context-severity-medium {
+    background: #fff4df;
+    color: #a16207;
+}
+
+.context-severity-high {
+    background: #feecec;
+    color: #b42318;
+}
+
+.context-severity-unknown {
+    background: #eef2f6;
+    color: #64748b;
+}
+
+
+/* ================================
+   INFORMATION NOTE
+================================ */
+
+.context-information-note {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #f1f7f2;
+    color: #46624a;
+}
+
+.context-information-note svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.context-information-note strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.context-information-note p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.context-empty {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #64748b;
+}
+
+.context-empty svg {
+    color: #398438;
+    margin-bottom: 12px;
+}
+
+.context-empty h3 {
+    margin: 0 0 6px;
+    color: #172033;
+}
+
+.context-empty p {
+    margin: 0;
+}
+
+
+/* ================================
+   RESPONSIVE - TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .context-page {
+        margin-left: 232px;
+        padding: 24px;
+    }
+
+    .context-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .context-farm-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================================
+   RESPONSIVE - MOBILE
+================================ */
+
+@media (max-width: 650px) {
+
+    .context-page {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .context-farm-selection {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .context-refresh-button {
+        justify-content: center;
+    }
+
+    .context-farm-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .context-result-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .context-item-main,
+    .context-item-bottom {
+        align-items: flex-start;
+    }
+}
+/* ================================
+   PAGE LAYOUT
+================================ */
+
+.context-page {
+    margin-left: 232px;
+    min-height: 100vh;
+    padding: 28px 32px;
+    box-sizing: border-box;
+}
+@media (max-width: 650px) {
+
+    .context-page {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .context-farm-selection {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .context-refresh-button {
+        justify-content: center;
+    }
+
+    .context-farm-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .context-result-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .context-item-main,
+    .context-item-bottom {
+        align-items: flex-start;
+    }
+}

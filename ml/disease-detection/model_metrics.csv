@@ -1,0 +1,2 @@
+test_loss,test_accuracy,test_macro_precision,test_macro_recall,test_macro_f1,best_validation_macro_f1,training_images,validation_images,test_images,number_of_classes
+0.07717776578588276,0.9738537678588104,0.9565094529187981,0.9734103691898183,0.9636587624057533,0.9625036790519258,39236,4360,10709,38

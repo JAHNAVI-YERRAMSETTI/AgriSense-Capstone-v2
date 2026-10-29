@@ -1,0 +1,56 @@
+AGRISENSE YIELD PREDICTION
+==========================
+
+Final Model:
+HistGradientBoostingRegressor
+
+Training Records:
+168,842
+
+Validation Records:
+7,018
+
+Test Records:
+10,436
+
+Training Period:
+1966-2012
+
+Validation Period:
+2013-2014
+
+Test Period:
+2015-2017
+
+Features:
+Year, State, District, Crop, Area_1000_ha
+
+Target:
+Yield_kg_per_ha
+
+Validation Results
+------------------
+MAE  : 409.2251 kg/ha
+RMSE : 616.7981 kg/ha
+R2   : 0.8648
+
+Final Test Results
+------------------
+MAE  : 443.1484 kg/ha
+RMSE : 733.1968 kg/ha
+R2   : 0.8157
+
+Random Forest Baseline
+----------------------
+MAE  : 579.90 kg/ha
+RMSE : 942.15 kg/ha
+R2   : 0.6958
+
+HistGradientBoosting Comparison
+--------------------------------
+MAE  : 443.15 kg/ha
+RMSE : 733.20 kg/ha
+R2   : 0.8157
+
+Production was intentionally excluded as an input
+feature because yield is derived from production and area.
